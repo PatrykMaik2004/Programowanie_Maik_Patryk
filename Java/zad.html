@@ -1,0 +1,55 @@
+<html>
+
+ 
+
+<head>
+
+ 
+
+    <meta charset="UTF-8">
+
+ 
+
+    <script type= "text/javascript">
+    
+    
+    //      Math.random()
+    //   Zwraca losową liczbę większą lub równą 0 i mniejszą od 1.
+
+ 
+
+    //    Math.ceil(.91);   zwróci wartość  1
+    //    Math.ceil(6);     zwróci wartość  6
+    //    Math.ceil(6.019); zwróci wartość  7
+    
+    //    Math.floor( 15.91); //  15
+    //    Math.floor(-15.91); // -16
+    
+    function PobierzLosowa(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    //min = 7, max = 23   rand = 0,1   = (0,1 * 17) + 7 = 1,7 + 7 = Math.floor(8,7) = 8
+    //min = 2, max = 12   rand = 0,7   = (0,7 * 10) + 2 = 7 + 2 = 9 
+    
+    var tablica = [];
+            
+    for(var i = 0; i < 20; i++)
+    {
+        tablica[i]=PobierzLosowa(1,30)
+        document.write(tablica[i] + "<br>");        
+    }
+    
+    </script>
+
+ 
+
+    
+</head>
+
+ 
+
+<body>
+</body>
+</html>
